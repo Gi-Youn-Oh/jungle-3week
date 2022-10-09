@@ -18,7 +18,7 @@ for _ in range(M):
 # print(graph)
 # [[], [2, 5], [1, 5], [4], [3, 6], [2, 1], [4]]
 
-def dfs(start, depth):
+def dfs(start):
 
     #해당 노드 방문체크 한다.
     visited[start] = True
@@ -26,7 +26,7 @@ def dfs(start, depth):
     # 해당 시작점을 기준으로 계속해서 dfs로 그래프를탐색한다.
     for i in graph[start]:
         if not visited[i]:
-            dfs(i, depth + 1)
+            dfs(i)
 
 # 방문처리
 visited = [False] * (1 + N)
@@ -39,7 +39,7 @@ for i in range(1, N + 1):
             count += 1  # 개수를 + 1
             visited[i] = True  # 방문 처리
         else:  # 연결된 그래프가 있다면
-            dfs(i, 0)  # dfs탐색을 돈다.
+            dfs(i)  # dfs탐색을 돈다.
             count += 1  # 개수를 +1
 
 print(count)

@@ -17,7 +17,7 @@ def dfs(V):
     visited1[V] = 1 #방문처리 / 연결된 작은 수 출력
     print(V, end=' ')
     for i in range(1, N+1):  # 연결된 작은 수부터 확인해서 재귀
-        if graph[V][i] == 1 and visited1[i] == 0:
+        if graph[V][i] == 1 and visited1[i] == 0: # 노드와 연결된 노드 중에 방문한적이 없는 노드가 있다면
             dfs(i)
 
 #bfs 함수 만들기
