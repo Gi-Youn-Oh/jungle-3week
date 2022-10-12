@@ -1,3 +1,6 @@
+# 우선 순위 큐 사용  / (거리:노드) / 거리순으로 제일 최소거리를 우선 순위로 정렬됨
+# 현재 가장 가까운 노드를 저장하기 위한 목적으로만 우선순위 큐를 추가로 이용
+
 import heapq
 import sys
 input = sys.stdin.readline
